@@ -23,15 +23,18 @@
  * SOFTWARE.
  * ********************************************************************************* */
 %>
-<div class="container text-center">
-    <button class="btn btn-lg btn-danger btn-action" data-action="shutdown">
-        <i class="material-icons">power_settings_new</i>
-        Shutdown
-    </button>
-    <button class="btn btn-lg btn-primary btn-action" data-action="reboot">
-        <i class="material-icons">settings_backup_restore</i>
-        Reboot
-    </button>
+<!-- Processing Modal -->
+<div class="modal fade" id="processingModal" tabindex="-1" role="dialog" aria-labelledby="processingModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="processingModalLabel">
+                    Processing...
+                </h4>
+            </div>
+            <div class="modal-body text-center">
+                <img src="/img/loading.gif" />
+            </div>
+        </div>
+    </div>
 </div>
-
-<script src="/js/custom/home.js"></script>

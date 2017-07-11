@@ -41,7 +41,10 @@ function respond(res, view, page, title, additionalIncludes, data) {
 
 /* GET "Now Playing" */
 router.get('/', function(req, res, next) {
-    respond(res, 'main', 'home', 'Home');
+    respond(res, 'main', 'home', 'Home', [
+        'modals/action_confirm',
+        'modals/processing'
+    ]);
 });
 
 /* GET "About" */

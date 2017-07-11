@@ -22,163 +22,56 @@
  * SOFTWARE.
  * ********************************************************************************* */
 
-function calculateArtworkWidth() {
-    // Calculate Album Cover Height
-    var screenHeight = $(window).height();
-    var screenWidth = $(window).width();
-    var contentWidth = $('.main-raised > .container').width();
-    var contentMargin = Number($('.main-raised > .container').css('padding-left').replace('px',''));
-
-    var footerHeight = $('footer').height();
-    var navHeight = 100;
-    var currentTitleHeight = $('#currentTitle').parent().height();
-    var currentArtistAlbumHeight = $('#currentArtist').parent().height();
-    var timestampHeight = $('#currentTimestamp').parent().parent().height();
-    var timestampBarHeight = $('#timestampProgressBar').parent().parent().height();
-    var buttonHeight = $('.row.text-center').height();
-    var failSafe = 30;
-
-    var songInfoHeight = currentTitleHeight + currentArtistAlbumHeight + timestampHeight + timestampBarHeight;
-
-    var albumCoverHeight = screenHeight
-        - footerHeight
-        - navHeight
-        - songInfoHeight
-        - buttonHeight
-        - failSafe
-    ;
-    albumCoverHeight = Math.min(albumCoverHeight, screenWidth);
-
-    $('.album-cover-row').css({ height: albumCoverHeight + 15, position: 'relative' });
-    $('.album-cover-row > img')
-        .height(albumCoverHeight)
-        .width(albumCoverHeight)
-        .css({
-            left: (contentWidth / 2) - (albumCoverHeight / 2) + contentMargin,
-            position: 'absolute'
-        })
-    ;
-    $('.album-cover-row').show();
-}
-
-/**
- * Updates a given Song Info and triggers the recalculation method, unless prevented by parameter
- * @param target Target Object (jQuery Selector)
- * @param value Value
- * @param preventEvent If given and true, the recalculation will not be triggered
- */
-function updateSongInfoText(target, value, preventEvent) {
-    $(target).text(value);
-    if (!preventEvent) calculateArtworkWidth();
-}
-
-function updateSongTitle(value, preventEvent) { updateSongInfoText('#currentTitle', value, preventEvent) }
-function updateSongArtist(value, preventEvent) { updateSongInfoText('#currentArtist', value, preventEvent) }
-function updateSongAlbum(value, preventEvent) { updateSongInfoText('#currentAlbum', value, preventEvent) }
-function updateSongTimestamp(value) { updateSongInfoText('#currentSongLength', value, true); }
-function updateCurrentTimestamp(value) { updateSongInfoText('#currentTimestamp', value, true); }
-
-function updatePlayPauseButton(state) {
-    $('#playPauseButton > i.material-icons').text((state === 'play' ? 'pause' : 'play_arrow'));
-}
-
-function updateTimestampProgressBar(val, max) {
-    $('#timestampProgressBar').css({
-        width: ((val / max) * 100) + '%'
-    });
-}
-
-function updateStatusButton(id, val) {
-    var hasClass = $(id).hasClass('btn-success');
-    if (val === "1" && !hasClass) {
-        $(id).addClass('btn-success');
-    } else if (val === "0" && hasClass) {
-        $(id).removeClass('btn-success');
-    }
-}
-
-function updateAllSongInfo(title,
-                           artist,
-                           album,
-                           length,
-                           lengthString,
-                           timestamp,
-                           timestampString,
-                           state,
-                           repeat,
-                           random) {
-    updateSongTitle(title, false);
-    updateSongArtist(artist, false);
-    updateSongAlbum(album, false);
-    updateSongTimestamp(lengthString);
-    updateCurrentTimestamp(timestampString);
-    updatePlayPauseButton(state);
-    updateTimestampProgressBar(timestamp, length);
-
-    updateStatusButton('#repeatButton', repeat);
-    updateStatusButton('#randomButton', random);
-
-    calculateArtworkWidth();
-}
-
-function updateUILoop() {
-    $.ajax({
-        url: '/mpd/status'
-    }).done(function(response) {
-        if (response.ok) {
-            updateAllSongInfo(
-                (response.data.currentSong ? response.data.currentSong.Title || '-' : '-'),
-                (response.data.currentSong ? response.data.currentSong.Artist || '-' : '-'),
-                (response.data.currentSong ? response.data.currentSong.Album || '-' : '-'),
-                response.data.songLength,
-                response.data.songLengthString,
-                response.data.currentTimestamp,
-                response.data.currentTimestampString,
-                response.data.state,
-                response.data.mpdObject.repeat,
-                response.data.mpdObject.random
-            );
+var ACTIONS = {
+    'shutdown': {
+        confirm: {
+            title: 'Shutdown System',
+            message: 'Would you like to shutdown the system? ' +
+                'You won\'t be able to access it after shutdown.'
+        },
+        action: function() {
+            sendSimpleAjaxRequest('/api/shutdown', 'post', null, function() {
+                processingModal.modal('hide');
+            });
         }
+    },
+    'reboot': {
+        confirm: {
+            title: 'Reboot System',
+            message: 'Would you like to reboot the system?'
+        },
+        action: function() {
+            sendSimpleAjaxRequest('/api/reboot', 'post', null, function() {
+                processingModal.modal('hide');
+            });
+        }
+    }
+};
 
-        setTimeout(updateUILoop, 250);
-    });
-}
-
-function executeSimpleRequest(url, method) {
-    $.ajax({ url: url, method: method || 'post' });
-}
+var confirmModal;
+var processingModal;
 
 $(document).ready(function() {
-    // Resize Stuff if the Window Size changes
-    $(window).resize(calculateArtworkWidth);
+    confirmModal = $('#systemConfirmModal');
+    processingModal = $('#processingModal');
 
-    // Initial Recalc Method
-    calculateArtworkWidth();
+    function openModal(action, modalConfig) {
+        confirmModal.data('action', action);
+        $('.modal-title', confirmModal).text(modalConfig.title);
+        $('.modal-body', confirmModal).text(modalConfig.message);
+        confirmModal.modal('show');
+    }
 
-    // Initialize UI Loop
-    updateUILoop();
-
-    // Set Button Events
-    $('#previousSongButton').click(function() { executeSimpleRequest('/mpd/control/prev') });
-    $('#playPauseButton').click(function() { executeSimpleRequest('/mpd/control/playPause') });
-    $('#nextSongButton').click(function() { executeSimpleRequest('/mpd/control/skip') });
-
-    $('#repeatButton').click(function() {
-        $.ajax({
-            url: '/mpd/repeat',
-            data: {
-                repeat: ($('#repeatButton').hasClass('btn-success') ? 0 : 1)
-            },
-            method: 'post'
-        });
+    $('.btn-action').click(function(e) {
+        var action = $(e.currentTarget).data('action');
+        openModal(action, ACTIONS[action].confirm);
     });
-    $('#randomButton').click(function() {
-        $.ajax({
-            url: '/mpd/random',
-            data: {
-                random: ($('#randomButton').hasClass('btn-success') ? 0 : 1)
-            },
-            method: 'post'
-        });
+
+    $('.btn-info', confirmModal).click(function(e) {
+        var action = confirmModal.data('action');
+        confirmModal.modal('hide');
+        processingModal.modal('show');
+
+        ACTIONS[action].action();
     });
 });
