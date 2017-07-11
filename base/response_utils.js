@@ -22,7 +22,7 @@
  * SOFTWARE.
  * ********************************************************************************* */
 
-const debug = require('debug')('mpd-ui:ResponseUtils');
+const debug = require('debug')('node-system-control:ResponseUtils');
 
 var ResponseUtils = {
     respondWithJson: function(res, data) {

@@ -23,5 +23,6 @@
  * ********************************************************************************* */
 
 const fs = require('fs');
+const debug = require('debug')('node-system-control:HEADER');
 
 debug(fs.readFileSync('config/header.txt').toString());

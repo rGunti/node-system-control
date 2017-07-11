@@ -22,7 +22,7 @@
  * SOFTWARE.
  * ********************************************************************************* */
 
-const debug = require('debug')('mpd-ui:Routes/Index');
+const debug = require('debug')('node-system-control:Routes/Index');
 const config = require('../base/config');
 const os = require('os');
 
@@ -41,7 +41,7 @@ function respond(res, view, page, title, additionalIncludes, data) {
 
 /* GET "Now Playing" */
 router.get('/', function(req, res, next) {
-    respond(res, 'main', 'home', 'Now Playing');
+    respond(res, 'main', 'home', 'Home');
 });
 
 /* GET "About" */

@@ -23,12 +23,8 @@
  * ********************************************************************************* */
 
 require('./base/ascii_printer');
-const debug = require('debug')('mpd-ui:MAIN');
+const debug = require('debug')('node-system-control:MAIN');
 const config = require('./base/config');
-debug('Starting up [%s] %s ...',
-    config.getValue(config.KEYS.FLAG),
-    config.getValue(config.KEYS.TITLE)
-);
 
 var express = require('express');
 var path = require('path');

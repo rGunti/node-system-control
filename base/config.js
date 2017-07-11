@@ -22,14 +22,18 @@
  * SOFTWARE.
  * ********************************************************************************* */
 const fs = require('fs');
-const debug = require('debug')('system-control:Config');
+const debug = require('debug')('node-system-control:Config');
 
 var config = {
     items: {},
     DEFAULT_CONFIG: 'config/config.json',
     KEYS: {
         TITLE: "title",
-        FLAG: "flag"
+        FLAG: "flag",
+        PORT: "port",
+        SERVER_HOST: "server.host",
+        SERVER_USER: "server.username",
+        SERVER_PASS: "server.password"
     },
     init: function() {
         debug('Initializing Config ...');
