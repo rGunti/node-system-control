@@ -1,0 +1,10 @@
+{
+  "title": "System Control",
+  "flag": "dev",
+  "port": 4000,
+  "server": {
+    "host": "127.0.0.1",
+    "username": "pi",
+    "password": "raspberry"
+  }
+}
