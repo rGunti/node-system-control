@@ -48,18 +48,6 @@ function autoFormatTime(secs) {
     }
 }
 
-function generateFunctionColumnOutput(items) {
-    if (!items) return '-';
-    //var returnVal = '<div class="row">';
-    for (var i = 0; i < items.length; i++) {
-        //returnVal += '<div class="col-xs-6">';
-        returnVal += items[i];
-        //returnVal += '</div>';
-    }
-    //returnVal += '</div>';
-    return returnVal;
-}
-
 function sendSimpleAjaxRequest(url, method, data, callback, errorCallback) {
     $.ajax({ method: method, url: url, data: data }).done(function(res) {
         if (!res.ok) {
