@@ -28,17 +28,17 @@
     <dt>Links</dt>
     <dd>
         <p>
-            <a target="_blank" class="waves-effect waves-teal btn" href="{{utils.package.homepage}}">
+            <a target="_blank" class="waves-effect waves-teal btn indigo" href="{{utils.package.homepage}}">
                 <i class="material-icons left">web</i>
                 Homepage</a>
         </p>
         <p>
-            <a target="_blank" class="waves-effect waves-teal btn" href="{{utils.package.repository}}">
+            <a target="_blank" class="waves-effect waves-teal btn indigo" href="{{utils.package.repository}}">
                 <i class="material-icons left">code</i>
                 Repository</a>
         </p>
         <p>
-            <a target="_blank" class="waves-effect waves-teal btn" href="{{utils.package.bugs}}">
+            <a target="_blank" class="waves-effect waves-teal btn indigo" href="{{utils.package.bugs}}">
                 <i class="material-icons left">bug_report</i>
                 Bug Report</a>
         </p>
@@ -127,7 +127,7 @@
         <dt>{{@key}}</dt>
         <dd>
             {{#each this}}
-                <samp>{{this.address}}</samp><br>
+                <samp class="break-all">{{this.address}}</samp><br>
             {{/each}}
         </dd>
     {{/each}}
@@ -137,6 +137,6 @@
 <dl>
     {{#each data.processEnv}}
         <dt><samp>{{@key}}</samp></dt>
-        <dd><samp class="env-var">{{this}}</samp></dd>
+        <dd><samp class="break-all">{{this}}</samp></dd>
     {{/each}}
 </dl>

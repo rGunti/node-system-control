@@ -35,7 +35,7 @@ body > .container {
 dl dt {
     font-weight: bold;
 }
-samp.env-var {
+samp.break-all {
     word-break: break-all;
 }
 .modal.bottom-sheet {
