@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fbe61d9-340c-483b-89d9-fad626b53dfc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/ios-fixer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/power-menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/handlebar-helpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/handlebar-renderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/about.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/error.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/index.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/license.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/partials/footer.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/partials/nav.hbs" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/about.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/license.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.json" afterPath="$PROJECT_DIR$/config/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/routes_index.js" afterPath="$PROJECT_DIR$/routes/routes_index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/home.ejs" afterPath="$PROJECT_DIR$/public/js/ajax.js" />
+    <list default="true" id="6fbe61d9-340c-483b-89d9-fad626b53dfc" name="Default" comment="Cleaned up a lot of stuff">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,8 +38,8 @@
           <file leaf-file-name="ajax.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/js/ajax.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="638">
-                  <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+                <state relative-caret-position="682">
+                  <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -88,18 +65,6 @@
                 <state relative-caret-position="198">
                   <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/js/custom/home.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-69">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#1320#0" expanded="false" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -157,6 +122,7 @@
         <option value="$PROJECT_DIR$/public/js/ajax.js" />
         <option value="$PROJECT_DIR$/public/js/power-menu.js" />
         <option value="$PROJECT_DIR$/public/js/ios-fixer.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -175,11 +141,6 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1273" />
-    <option name="width" value="1294" />
-    <option name="height" value="1407" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -207,25 +168,17 @@
             <path>
               <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
               <item name="node-system-control" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node-system-control" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
               <item name="node-system-control" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-system-control" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-system-control" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
@@ -252,19 +205,7 @@
               <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
               <item name="node-system-control" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="modals" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-system-control" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="partials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node-system-control" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node-system-control" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,12 +350,27 @@
       <option name="presentableId" value="Default" />
       <updated>1511735531583</updated>
       <workItem from="1511735533071" duration="127000" />
-      <workItem from="1511789277032" duration="13714000" />
+      <workItem from="1511789277032" duration="13960000" />
     </task>
+    <task id="LOCAL-00001" summary="Reimplemented EVERYTHING using MaterializeCSS and made some usability improvements compared to the last version">
+      <created>1511803035084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511803035086</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Cleaned up a lot of stuff">
+      <created>1511803213516</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1511803213516</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13841000" />
+    <option name="totallyTimeSpent" value="14087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -454,6 +410,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reimplemented EVERYTHING using MaterializeCSS and made some usability improvements compared to the last version" />
+    <MESSAGE value="Cleaned up a lot of stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up a lot of stuff" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="3" />
@@ -461,14 +422,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/footer.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -566,9 +519,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511735255487" expanded="true" signature="2773:2780" ph="×" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -584,14 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -634,17 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-457">
           <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc;n#pad#0" expanded="false" />
-            <marker date="1511735255484" expanded="true" signature="3683:3690" ph="×" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -669,9 +601,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1320#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -691,41 +621,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/ajax.js">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="396">
+          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="Copyright.UI">
-        <settings>
-          <last-edited>Reserved</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/config/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
