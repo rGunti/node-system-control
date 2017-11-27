@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fbe61d9-340c-483b-89d9-fad626b53dfc" name="Default" comment="Cleaned up a lot of stuff">
+    <list default="true" id="6fbe61d9-340c-483b-89d9-fad626b53dfc" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +38,8 @@
           <file leaf-file-name="ajax.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/js/ajax.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="682">
-                  <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                <state relative-caret-position="506">
+                  <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -350,7 +350,7 @@
       <option name="presentableId" value="Default" />
       <updated>1511735531583</updated>
       <workItem from="1511735533071" duration="127000" />
-      <workItem from="1511789277032" duration="13960000" />
+      <workItem from="1511789277032" duration="13967000" />
     </task>
     <task id="LOCAL-00001" summary="Reimplemented EVERYTHING using MaterializeCSS and made some usability improvements compared to the last version">
       <created>1511803035084</created>
@@ -366,11 +366,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511803213516</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Cleaned up a lot of stuff">
+      <created>1511803254937</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1511803254937</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14087000" />
+    <option name="totallyTimeSpent" value="14094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -663,8 +670,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="506">
+          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding />
         </state>
       </provider>
