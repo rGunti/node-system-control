@@ -1,0 +1,106 @@
+<div class="center-align">
+    <a class="btn-large indigo modal-trigger" href="#shutdown-menu">
+        <span class="fa fa-fw fa-power-off"></span>
+        Power
+    </a>
+</div>
+
+<div id="shutdown-menu" class="modal bottom-sheet">
+    <div class="modal-content">
+        <h4>Power Control</h4>
+        <ul class="collection">
+            <li class="collection-item avatar modal-trigger modal-close" data-target="shutdown-confirm">
+                <i class="material-icons circle red">power_settings_new</i>
+                <span class="title">Shutdown</span>
+                <p>
+                    Turns the device off. You won't be able to access its resources after this.
+                </p>
+            </li>
+            <li class="collection-item avatar modal-trigger modal-close" data-target="reboot-confirm">
+                <i class="material-icons circle indigo">refresh</i>
+                <span class="title">Restart</span>
+                <p>
+                    Shuts down all services and restarts the device. You might have to reconnect your
+                    device to the hotspot once the reboot is completed.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+</div>
+
+<div id="shutdown-confirm" class="modal bottom-sheet">
+    <div class="modal-content">
+        <h4>Shutdown?</h4>
+        <p>
+            Would you really like to shutdown the device?
+        </p>
+        <p>
+            You won't be able to use it anymore until you physically power it back on.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a id="shutdown-confirm" href="#shutdown-process-modal" class="modal-action modal-close modal-trigger waves-effect waves-green btn red">Yes</a>
+        <a id="shutdown-cancel" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">No</a>
+    </div>
+</div>
+
+<div id="reboot-confirm" class="modal bottom-sheet">
+    <div class="modal-content">
+        <h4>Restart?</h4>
+        <p>
+            Would you really like to restart the device?
+        </p>
+        <p>
+            You might loose your connection to the device for a short period of time.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a id="reboot-confirm" href="#rebooting-process-modal" class="modal-action modal-close modal-trigger waves-effect waves-green btn indigo">Yes</a>
+        <a id="reboot-cancel" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">No</a>
+    </div>
+</div>
+
+<div id="shutdown-process-modal" class="modal bottom-sheet non-dismissible">
+    <div class="modal-content">
+        <h4>Shutting down ...</h4>
+        <div class="center-align">
+            <div class="progress">
+                <div class="indeterminate indigo"></div>
+            </div>
+            <p class="flow-text">
+                This might take a minute ...
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="shutdown-complete-modal" class="modal bottom-sheet non-dismissible">
+    <div class="modal-content">
+        <h4>Shutdown completed</h4>
+        <div class="center-align">
+            <h5><span class="fa fa-fw fa-check-circle-o"></span></h5>
+            <p class="flow-text">
+                You can now close this app.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="rebooting-process-modal" class="modal bottom-sheet non-dismissible">
+    <div class="modal-content">
+        <h4>Restarting ...</h4>
+        <div class="center-align">
+            <div class="progress">
+                <div class="indeterminate indigo"></div>
+            </div>
+            <p class="flow-text">
+                This might take a minute ...
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="{{ROOT_DIR}}/public/js/power-menu.js"></script>
