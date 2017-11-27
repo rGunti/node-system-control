@@ -29,6 +29,8 @@ body > .container {
     font-weight: normal !important;
     height: auto !important;
     line-height: 1.25em !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
 }
 dl dt {
     font-weight: bold;
