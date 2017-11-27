@@ -24,32 +24,25 @@
 
 const debug = require('debug')('node-system-control:Routes/Index');
 const config = require('../base/config');
+const HandleRender = require('../ui/handlebar-renderer');
+const moment = require('moment');
+require('moment-duration-format');
 const os = require('os');
 
 var express = require('express');
 var router = express.Router();
 
 function respond(res, view, page, title, additionalIncludes, data) {
-    res.render('templates/' + view, {
-        title: title,
-        page: page,
-        config: config.items,
-        additionalIncludes: additionalIncludes || [],
-        data: data
-    });
+    throw "NOT IMPLEMENTED!";
 }
 
-/* GET "Now Playing" */
 router.get('/', function(req, res, next) {
-    respond(res, 'main', 'home', 'Home', [
-        'modals/action_confirm',
-        'modals/processing'
-    ]);
+    HandleRender.render(res, 'index', 'System Control');
 });
 
 /* GET "About" */
 router.get('/about', function(req, res, next) {
-    respond(res, 'main', 'about', 'About', null, {
+    HandleRender.render(res, 'about', 'About', {
         arch: os.arch(),
         cpus: os.cpus(),
         memoryFree: os.freemem(),
@@ -61,6 +54,7 @@ router.get('/about', function(req, res, next) {
         osType: os.type(),
         osRelease: os.release(),
         userInfo: os.userInfo(),
+        uptime: moment.duration(process.uptime(), "seconds").format("d[d] HH:mm:ss", { largest: 2 }),
 
         processEnv: process.env,
 
@@ -68,19 +62,13 @@ router.get('/about', function(req, res, next) {
             version: process.version,
             versions: process.versions,
             memoryUsage: process.memoryUsage()
-        },
-
-        packageInfo: config.packageInfo,
-        config: config.items
+        }
     });
 });
 
 /* GET "License" */
 router.get('/license', function(req, res, next) {
-    respond(res, 'main', 'license', 'License Info', null, {
-        config: config.items,
-        packageInfo: config.packageInfo
-    });
+    HandleRender.render(res, 'license', 'License');
 });
 
 module.exports = router;
