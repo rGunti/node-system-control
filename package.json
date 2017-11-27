@@ -1,6 +1,6 @@
 {
   "name": "node-system-control",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "System Control is a small web app that allows to control your Raspberry Pi (or any other Linux-based computer with SSH access)",
   "private": true,
   "license": "MIT",
